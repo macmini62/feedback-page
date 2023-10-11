@@ -31,8 +31,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background-color: #33363b;
     border-radius: 50%;
 }
@@ -43,6 +43,7 @@ body{
 
 .feedbackRequest{
     display: flex;
+    flex-wrap: wrap;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
@@ -71,14 +72,22 @@ body{
 after selecting a certain value it should change the background-color
 to orange*/
 .ratingValue button{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     align-self: center;
     border: 0;
+    padding: 0;
     border-radius: 50%;
     color: #fff;
     background-color: #30343b;
     font-family: 'Overpass', sans-serif;
+}
+.ratingValue button:hover{
+    background-color: #959eac;
+    cursor: pointer;
+}
+.ratingValue button:active{
+    background-color: #fb7413;
 }
 
 /* when clicked should change background color to white 
@@ -95,7 +104,16 @@ text color to orange */
     font-family: 'Overpass', sans-serif;
     font-weight: 700;
 }
+#submitButton:hover{
+    cursor: pointer;
+}
+#submitButton:active{
+    color:#fb7413;
+    background-color:#fff;
+}
 
+
+/* feedback response */
 .responseBody{
     display: flex;
     flex-direction: column;
@@ -120,6 +138,7 @@ text color to orange */
     justify-content: center;
     align-items: center;
     align-self: center;
+    column-gap: 5px;
     width: 70%;
     height: 10%;
     border-radius: 30px;
