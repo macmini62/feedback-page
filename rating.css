@@ -1,7 +1,10 @@
 html{
     box-sizing: border-box;
+    overflow: hidden;
 }
 body{
+    display: flex;
+    overflow: hidden;
     box-sizing: inherit !important;
     margin: 0;
     font-family: 'Overpass', sans-serif;
@@ -9,6 +12,7 @@ body{
 }
 
 .requestBody{
+    visibility: visible;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -60,10 +64,14 @@ body{
 }
 
 .ratingValue{
+    list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    align-items: flex-start;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    text-align: center;
     width: 100%;
     height: 20%;
 }
@@ -71,22 +79,23 @@ body{
 /*when hovered on the button should become brighter in color (light-gray)...
 after selecting a certain value it should change the background-color
 to orange*/
-.ratingValue button{
+
+.btn{
     width: 45px;
     height: 45px;
-    align-self: center;
     border: 0;
-    padding: 0;
+    text-align: center;
+    transition: 0.5s;
     border-radius: 50%;
     color: #fff;
     background-color: #30343b;
     font-family: 'Overpass', sans-serif;
 }
-.ratingValue button:hover{
+.btn:hover{
     background-color: #959eac;
     cursor: pointer;
 }
-.ratingValue button:active{
+.btn:focus{
     background-color: #fb7413;
 }
 
@@ -103,9 +112,11 @@ text color to orange */
     background-color: #fb7413;
     font-family: 'Overpass', sans-serif;
     font-weight: 700;
+    letter-spacing: 0.1rem;
 }
 #submitButton:hover{
     cursor: pointer;
+    scale: 1.05;
 }
 #submitButton:active{
     color:#fb7413;
@@ -114,7 +125,8 @@ text color to orange */
 
 
 /* feedback response */
-.responseBody{
+.responseBody {
+    visibility: collapse;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
